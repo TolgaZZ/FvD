@@ -14,7 +14,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
+  1. https://stackoverflow.com/questions/50840168/how-to-detect-if-the-os-is-in-dark-mode-in-browsers
   2. -bron 2-
   3. -...-
 
@@ -27,7 +27,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboard.png" width="375px" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
@@ -48,19 +48,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ginggoed.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
+  Ik heb geleerd dat je hoe je in puur css kan animeren. Ik wist hiervoor ook niet hoe je darkthemes moest maken, na wat onderzoeken bleek het simpeler dan dat ik had verwacht.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/ginggoed.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  Ik moest meerdere animaties toevoegen aan het zelfde object, ik raakte ergens in de war en dacht dat ik steeds een ander object eromheen moest aanspreken om het te laten werken. Bleek dat het ook werkt als ik een , zet en animation delays gebruik.
+
+  <img src="readme-images/gingfout" width="375px" alt="bummer">
 </details>
 
 

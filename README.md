@@ -48,14 +48,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/ginggoed.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ginggoed.png" width="475px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
   Ik heb geleerd dat je hoe je in puur css kan animeren. Ik wist hiervoor ook niet hoe je darkthemes moest maken, na wat onderzoeken bleek het simpeler dan dat ik had verwacht.
 
-  <img src="readme-images/ginggoed.png" width="375px" alt="top">
+  <img src="readme-images/ginggoed.png" width="475px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
@@ -63,7 +63,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Ik moest meerdere animaties toevoegen aan het zelfde object, ik raakte ergens in de war en dacht dat ik steeds een ander object eromheen moest aanspreken om het te laten werken. Bleek dat het ook werkt als ik een , zet en animation delays gebruik.
 
-  <img src="readme-images/gingfout" width="375px" alt="bummer">
+  <img src="readme-images/gingfout.png" width="475px" alt="bummer">
 </details>
 
 

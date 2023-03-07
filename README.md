@@ -48,7 +48,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/ginggoed.png" width="475px" alt="uitomst opdracht 1">
+  <img src="readme-images/ginggoed.png" width="575px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 

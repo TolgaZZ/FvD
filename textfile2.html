@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NG Logo Animation</title>
+	<style>
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #003366;
+		}
+
+		#logo {
+			font-size: 6rem;
+			font-family: 'National Geographic Regular', sans-serif;
+			color: #fff;
+			opacity: 0;
+		}
+
+		.fade-in-reveal {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity 1s ease-out, transform 1s ease-out;
+		}
+	</style>
+	<style>
+		@font-face {
+			font-family: 'National Geographic Regular';
+			src: url('https://example.com/ng-regular.woff2') format('woff2'),
+			     url('https://example.com/ng-regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 id="logo" class="fade-in-reveal">National Geographic</h1>
+	</div>
+	<script>
+		const logo = document.getElementById('logo');
+		logo.classList.add('fade-in-reveal');
+	</script>
+</body>
+</html>
+  

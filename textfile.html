@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spinning Block Animation</title>
+    <style>
+      .container {
+        position: relative;
+      }
+
+      .spinning-block {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        animation: spin-and-slide 2s linear forwards;
+      }
+
+      .text {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      @keyframes spin-and-slide {
+        0% {
+          transform: rotate(0);
+          margin-left: 0;
+        }
+        50% {
+          transform: rotate(360deg);
+          margin-left: 100px;
+        }
+        100% {
+          transform: rotate(720deg);
+          margin-left: 200px;
+        }
+      }
+
+      .spinning-block.move-end + .text {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="spinning-block"></div>
+      <div class="text">
+        This is some text that will be revealed after the block moves.
+      </div>
+    </div>
+    <script>
+      var block = document.querySelector('.spinning-block');
+      block.addEventListener('animationend', function() {
+        this.classList.add('move-end');
+      });
+    </script>
+  </body>
+</html>

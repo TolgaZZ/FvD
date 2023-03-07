@@ -5,8 +5,8 @@
 /*********/
 @font-face {
 	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
+	src: url('../fonts/geographeditweb-medium.woff2	') format('woff2'),
+			 url('../fonts/geographweb-regular.woff2') format('woff');
 	font-weight: normal;
 	font-style: normal;
 
@@ -55,3 +55,67 @@ body {
 
 /* jouw code */
 
+
+h1::before {
+	content: " ";
+	width: 4rem;
+  height: 7rem;
+  position: relative;
+  display: inline-block;  
+  margin: .8rem 1rem 0 0;
+	box-shadow: inset 0 0 0 .3em #eac715;
+}
+
+
+
+body > section {
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-flow: column;
+}
+
+h1{
+	font-size: 2.5rem;
+	vertical-align: top;
+	display: flex;
+	align-items: center;
+	
+}
+
+h1 > section  :nth-last-child(-n+10){
+	color: #eac715;
+}
+
+body > section > h1 > section {
+	padding: 0 .6rem 0 .6rem;
+	border: #eac715 solid .5rem;
+	right: 0;
+  transform: translateX(100%);
+  animation: slideIn 2s forwards;
+	
+}
+
+.box {
+	animation: changeColor 2s linear infinite
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+  }
+  100% {
+    background-color: #eac715;
+		color: #111;
+  }
+}

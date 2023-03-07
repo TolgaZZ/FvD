@@ -6,69 +6,55 @@
 @font-face {
 	font-family: 'eenfont';
 	src: url('../fonts/geographeditweb-medium.woff2	') format('woff2'),
-			 url('../fonts/geographweb-regular.woff2') format('woff');
+		url('../fonts/geographweb-regular.woff2') format('woff');
 	font-weight: normal;
 	font-style: normal;
 
 }
 
-
-
-
-
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
-button:not[disabled], summary {
+button:not[disabled],
+summary {
 	cursor: pointer;
 }
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #eee;
+	--font: 'eenfont', sans-serif;
 }
-
-
-
-
-
 /****************/
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
+	font-family: var(--font);
+	color: var(--color-text);
+	background-color: var(--color-background);
 }
-
 /* jouw code */
-
 
 h1::before {
 	content: " ";
 	width: 4rem;
-  height: 7rem;
-  position: relative;
-  display: inline-block;  
-  margin: .8rem 1rem 0 0;
+	height: 7rem;
+	position: relative;
+	display: inline-block;
+	margin: 0 1rem 0 0;
 	box-shadow: inset 0 0 0 .3em #eac715;
 }
 
-
-
-body > section {
+body>section {
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
@@ -76,46 +62,89 @@ body > section {
 	flex-flow: column;
 }
 
-h1{
+h1 {
 	font-size: 2.5rem;
 	vertical-align: top;
 	display: flex;
 	align-items: center;
-	
 }
 
-h1 > section  :nth-last-child(-n+10){
-	color: #eac715;
-}
-
-body > section > h1 > section {
+body>section>h1>section {
 	padding: 0 .6rem 0 .6rem;
 	border: #eac715 solid .5rem;
+	color: #eac715;
 	right: 0;
-  transform: translateX(100%);
-  animation: slideIn 2s forwards;
-	
+	transform: translateX(100%);
+	animation: slideIn 2s forwards,
+		slideAndFill 3s linear forwards,
+		changeColorText 3s linear forwards;
+	animation-delay: 0s, 3s, 6s;
 }
-
-.box {
-	animation: changeColor 2s linear infinite
-}
-
 
 @keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
 }
 
-@keyframes changeColor {
-  0% {
-  }
-  100% {
-    background-color: #eac715;
-		color: #111;
-  }
+@keyframes slideAndFill {
+	0% {
+		left: -100%;
+		background-color: transparent;
+	}
+
+	50% {
+		left: 0%;
+		background-color: transparent;
+	}
+
+	100% {
+		left: 0%;
+		background-color: #eac715;
+	}
+}
+
+@keyframes changeColorText {
+	0% {
+		color: #eac715;
+	}
+
+	100% {
+		color: var(--color-text);
+	}
+}
+
+@media screen and (max-width: 992px) {
+	h1 {
+		font-size: 1.1rem;
+		margin: 0rem 1rem 0 0;
+	}
+
+	h1::before {
+		box-shadow: inset 0 0 0 .5em #eac715;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+
+	/* Styles for dark mode */
+	:root {
+		/* startje */
+		--color-text: #fff;
+		--color-background: #111;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	/* Styles for dark mode */
+	:root {
+		/* startje */
+		--color-text: #111;
+		--color-background: #fff;
+	}
+
 }

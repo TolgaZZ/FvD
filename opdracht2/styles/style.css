@@ -1,57 +1,152 @@
-/* CSS Document */
-
-/*********/
-/* FONTS */
-/*********/
+/* Fonts */
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
+  font-family: 'eenfont';
+  src: url('../fonts/eenfont.woff2') format('woff2'),
+    url('../fonts/eenfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-
-
-
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+/* CSS Remedy */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-button:not[disabled], summary {
-	cursor: pointer;
+button:not[disabled],
+summary {
+  cursor: pointer;
 }
 
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
+/* Custom properties */
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  --color-text: #111;
+  --color-background: #f0f0f0;
 }
 
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
+/* Jouw styling */
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
+  font-family: eenfont, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column; /* add this */
 }
 
-/* jouw code */
+/* Carousel */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+}
 
+.card {
+  position: absolute;
+  width: 20em;
+  height: 30em;
+  background-color: powderblue;
+  box-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .25em;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-1em);
+  box-shadow: 0 0.8em 1.2em rgba(0, 0, 0, 0.1);
+}
+
+.card.selected {
+  z-index: 5;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 2vw;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30em;
+  perspective: 1000px;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+/* Swipe functionality */
+.carousel-container > .carousel {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Song info */
+.song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.song-title {
+  font-size: 3vw;
+  margin-bottom: 1em;
+}
+
+.play-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.play-button {
+  font-size: 2vw;
+  padding: 0.5em 1.5em;
+  margin-right: 1em;
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.current-time {
+  font-size: 2vw;
+}
+
+.play-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}

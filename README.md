@@ -18,7 +18,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. https://www.youtube.com/watch?v=wGPDuqgkoew
   3. https://developer.spotify.com/documentation/web-api/tutorials/code-pkce-flow
   4. https://stackoverflow.com/questions/246801/how-can-you-encode-a-string-to-base64-in-javascript
-  5. Discord server "The programmer's hangout"
+  5. Discord server "The programmer's hangout" https://discord.gg/programming
   6. Sanne
   
 

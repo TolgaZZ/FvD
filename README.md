@@ -1,7 +1,7 @@
 # Procesverslag
-**Auteur:** Tolga Zorlu
+**Auteur:** -jouw naam-
 
-**De opdrachten:** [opdracht 1](https://tolgazz.github.io/FvD/opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
+**De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
 
 Markdown is een simpele manier om HTML te schrijven.  
@@ -15,8 +15,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Bronnenlijst
   1. https://stackoverflow.com/questions/50840168/how-to-detect-if-the-os-is-in-dark-mode-in-browsers
-  2. -bron 2-
-  3. -...-
+  2. https://www.youtube.com/watch?v=wGPDuqgkoew
+  3. https://developer.spotify.com/documentation/web-api/tutorials/code-pkce-flow
+  4. https://stackoverflow.com/questions/246801/how-can-you-encode-a-string-to-base64-in-javascript
+  5. Discord server "The programmer's hangout"
+  6. Sanne
+  
 
 
 
@@ -34,6 +38,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Aan deze technieken/punten wil ik werken:
   - Leren hoe een logo geanimeerd kan worden in css
   - De techniek achter darkmodus leren
+ 
  
 </details>
 
@@ -73,15 +78,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/storyboard2.png" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik wil beter worden met web applicaties
+  - beter worde in het gebruik van api's 
+
 </details>
 
 
@@ -101,18 +105,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
 
-
+  ik ben bezig geweest met het designen coderen van de html kant, dit ging opzich wel goed moet alleen een manier vinden om de cards ook daadwerlijker swipeable te maken zonder javascript libary's 
 
   ### Bevinding 2:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
 
+   <img src="readme-images/spotifyerror.png" width="375px" alt="error">
+
+   Tijdens het developen van deze opdracht kwam maakte ik gebruik van de open api variant, alleen kon ik niet precies doen wat mijn eigen doel is dus ben ik geswitched naar de api met autherizer (PKCE)
+    
+
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
 
+  ik heb het opgelost ik heb hulp gekregen in developer groepen op discord. Zei gaven aan dat ik mijn fetch verkeerd deed in de array
 
 
   ### Bevinding 3:
-  ...
+  
+  Uiteindelijk toch niet geredt, ik zal het inorde krijgen voor de herkansing. 
+
 </details>
 
 
@@ -123,7 +135,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/opdracht2design.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 

@@ -25,6 +25,7 @@ button:not[disabled],
 summary {
 	cursor: pointer;
 }
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -34,32 +35,34 @@ summary {
 	--color-background: #eee;
 	--font: 'eenfont', sans-serif;
 }
+
+@media (prefers-color-scheme: dark) {
+
+	/* Styles for dark mode */
+	:root {
+		/* startje */
+		--color-text: #fff;
+		--color-background: #111;
+	}
+}
+
 /****************/
 /* JOUW STYLING */
 /****************/
+
 body {
 	font-family: var(--font);
 	color: var(--color-text);
 	background-color: var(--color-background);
 }
-/* jouw code */
 
-h1::before {
-	content: " ";
-	width: 4rem;
-	height: 7rem;
-	position: relative;
-	display: inline-block;
-	margin: 0 1rem 0 0;
-	box-shadow: inset 0 0 0 .3em #eac715;
-}
+/* jouw code */
 
 body>section {
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	flex-flow: column;
 }
 
 h1 {
@@ -69,18 +72,45 @@ h1 {
 	align-items: center;
 }
 
+/* This is the sliding box */
 body>section>h1>section {
 	padding: 0 .6rem 0 .6rem;
 	border: #eac715 solid .5rem;
 	color: #eac715;
 	right: 0;
 	transform: translateX(100%);
-	animation: slideIn 2s forwards,
-		slideAndFill 3s linear forwards,
-		changeColorText 3s linear forwards;
-	animation-delay: 0s, 3s, 6s;
+	animation: slideIn 1s forwards,
+		slideAndFill 2s linear forwards,
+		changeColorText 1s linear forwards;
+	animation-delay: 0s, 1s, 2s;
 }
 
+/* This is the class I used for the box on the left to fill it with water */
+.box {
+	width: 4rem;
+	height: 7rem;
+	position: relative;
+	display: inline-block;
+	margin: 0 1rem 0 0;
+	box-shadow: inset 0 0 0 .5em #eac715;
+	overflow: hidden;
+}
+
+.box:before {
+	content: "";
+	position: absolute;
+	width: 30em;
+	height: 30em;
+	background-color: #0279a8;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 40%;
+	animation: fill 10s ease-in-out;
+	z-index: -2;
+}
+
+
+/* This animation is for the sliding box from right to left */
 @keyframes slideIn {
 	0% {
 		transform: translateX(100%);
@@ -91,6 +121,7 @@ body>section>h1>section {
 	}
 }
 
+/* This animation fills the background of the box above here with yellow  */
 @keyframes slideAndFill {
 	0% {
 		left: -100%;
@@ -108,6 +139,7 @@ body>section>h1>section {
 	}
 }
 
+/* This changes the color of the letters inside the box once it fills up. So it stays readable */
 @keyframes changeColorText {
 	0% {
 		color: #eac715;
@@ -118,33 +150,49 @@ body>section>h1>section {
 	}
 }
 
-@media screen and (max-width: 992px) {
+/* This fills the national geographic logo with water */
+@keyframes fill {
+	from {
+		top: 250px;
+		transform: translateX(-50%) rotate(0deg);
+	}
+
+	to {
+		top: -50px;
+		transform: translateX(-50%) rotate(360deg);
+	}
+}
+
+
+/* Small devices (landscape phones) */
+@media (min-width: 20em) {
 	h1 {
-		font-size: 1rem;
-		margin: 0rem 1rem 0 0;
+		font-size: 1.2rem;
+		margin: 0;
 	}
 
 	h1::before {
-		box-shadow: inset 0 0 0 .5em #eac715;
+		box-shadow: inset 0 0 0 .3em #eac715;
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-
-	/* Styles for dark mode */
-	:root {
-		/* startje */
-		--color-text: #fff;
-		--color-background: #111;
+/* Medium devices (tablets) */
+@media (min-width: 30em) {
+	h1 {
+		font-size: 1.8rem;
 	}
 }
 
-@media (prefers-color-scheme: light) {
-	/* Styles for dark mode */
-	:root {
-		/* startje */
-		--color-text: #111;
-		--color-background: #fff;
+/* Large devices (desktops) */
+@media (min-width: 48em) {
+	h1 {
+		font-size: 2.4rem;
 	}
+}
 
+/* Extra large devices (large desktops) */
+@media (min-width: 64em) {
+	h1 {
+		font-size: 3.2rem;
+	}
 }

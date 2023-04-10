@@ -18,11 +18,12 @@
 
 	<header>
 		<h1>Songdeck</h1>
-		<button onclick="login()">Login</button>
+		<button id="main-login">Login</button>
 	</header>
 
 	<main>
-		<div class="carousel-container">
+
+		<!-- <div class="carousel-container">
 			<div class="carousel">
 				<div class="card selected" id="card1">
 					<div class="card-image"></div>
@@ -42,10 +43,18 @@
 			</div>
 			<div class="left-arrow arrow"></div>
 			<div class="right-arrow arrow"></div>
+		</div> -->
+
+		<div class="carousel-container">
+			<div class="cards-container carousel">
+			</div>
+			<div class="left-arrow arrow"></div>
+			<div class="right-arrow arrow"></div>
 		</div>
+
 		<div class="song-info-container">
 			<div class="song-info">
-				<div class="song-title"></div>
+				<div id="song-title" class="song-title"></div>
 				<div class="play-controls">
 					<button class="play-button">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -58,38 +67,20 @@
 			</div>
 		</div>
 
-		<div class="grid-container">
-			<div class="grid-item">
-			  <img class="grid-item-image" src="https://example.com/image1.jpg">
-			  <h2 class="grid-item-title">Title 1</h2>
-			  <button class="grid-item-add">Add</button>
-			  <button class="grid-item-remove">Remove</button>
-			</div>
-			<div class="grid-item">
-			  <img class="grid-item-image" src="https://example.com/image2.jpg">
-			  <h2 class="grid-item-title">Title 2</h2>
-			  <button class="grid-item-add">Add</button>
-			  <button class="grid-item-remove">Remove</button>
-			</div>
-			<div class="grid-item">
-			  <img class="grid-item-image" src="https://example.com/image3.jpg">
-			  <h2 class="grid-item-title">Title 3</h2>
-			  <button class="grid-item-add">Add</button>
-			  <button class="grid-item-remove">Remove</button>
-			</div>
-			<div class="grid-item">
-			  <img class="grid-item-image" src="https://example.com/image4.jpg">
-			  <h2 class="grid-item-title">Title 4</h2>
-			  <button class="grid-item-add">Add</button>
-			  <button class="grid-item-remove">Remove</button>
-			</div>
-		  </div>
+		
+
+		<div class="playlist-container grid-container"></div>
 		  
+
+		  <div id="custom-list">
+
+		  </div>
 	</main>
 
 	<footer>
-		<script defer src="scripts/script.js"></script>
-		<script defer src="scripts/script2.js"></script>
+		<script defer src="scripts/main.js"></script>
+		<!-- <script defer src="scripts/script.js"></script> -->
+		<!-- <script defer src="scripts/script2.js"></script> -->
 		<!-- <script defer src="scripts/script3.js"></script> -->
 	</footer>
 

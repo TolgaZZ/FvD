@@ -6,7 +6,7 @@ function login() {
   window.location.href = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scopes}`;
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', () => {
   // const urlParams = new URLSearchParams(window.location.search);
   // let code = urlParams.get('code');
   // if (!code) {
@@ -144,10 +144,12 @@ window.addEventListener('load', async () => {
       return data.items;
     };
     const tracks = getTopTracks();
+
+    
   }
 
   const songTitleElement = document.querySelector('.song-title');
-  const audio = new Audio();
+  var audio = new Audio();
 
   function updateSongInfo(track) {
     songTitleElement.textContent = `${track.name} - ${track.artist}`;
@@ -155,7 +157,6 @@ window.addEventListener('load', async () => {
     console.log('preview url: ' + track.previewUrl);
     audio.play();
   }
-
 
   // const getArtist = async (accessToken) => {
   //   const response = await fetch('https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb', {
@@ -230,6 +231,7 @@ window.addEventListener('load', async () => {
         updateSelection();
       });
       cardsContainer.appendChild(card);
+      console.log("bmhjkhgfhfg");
     });
 
     // Initialize the play button

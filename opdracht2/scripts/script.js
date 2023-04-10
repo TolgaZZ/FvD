@@ -93,6 +93,8 @@
   });
 
   updateCards();
+
+  
   // Constants
   const SWIPE_THRESHOLD = 100;
   const SWIPE_ANGLE_THRESHOLD = 30; // in degrees

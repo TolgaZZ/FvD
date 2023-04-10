@@ -17,7 +17,7 @@
 <body>
 
 	<header>
-		<h1>Songdeck</h1>
+		<h1><a href="/songdeck.html">Songdeck</a></h1>
 		<button id="main-login">Login</button>
 	</header>
 
@@ -48,8 +48,8 @@
 		<div class="carousel-container">
 			<div class="cards-container carousel">
 			</div>
-			<div class="left-arrow arrow"></div>
-			<div class="right-arrow arrow"></div>
+			<div class="left-arrow arrow">Left &lt; </div>
+			<div class="right-arrow arrow">Right &raquo; </div>
 		</div>
 
 		<div class="song-info-container">
@@ -68,17 +68,19 @@
 		</div>
 
 		
-
+<!-- Hier komt alle liedjes te staan -->
 		<div class="playlist-container grid-container"></div>
 		  
+		<!-- mijn custom playlist -->
+		  <ul id="custom-list">
 
-		  <div id="custom-list">
-
-		  </div>
+		  </ul>
 	</main>
 
 	<footer>
 		<script defer src="scripts/main.js"></script>
+		<script defer src="scripts/carousel.js"></script>
+
 		<!-- <script defer src="scripts/script.js"></script> -->
 		<!-- <script defer src="scripts/script2.js"></script> -->
 		<!-- <script defer src="scripts/script3.js"></script> -->

@@ -20,6 +20,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. https://stackoverflow.com/questions/246801/how-can-you-encode-a-string-to-base64-in-javascript
   5. Discord server "The programmer's hangout" https://discord.gg/programming
   6. Sanne
+  7. https://codepen.io/shooft/pen/eYLGWMB
+  8. Ozkan Collega (hulp bij login maken)
+  9. https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript
+  10. https://stackoverflow.com/questions/3396088/how-do-i-remove-an-object-from-an-array-with-javascript
+  11. https://www.w3schools.com/jsref/jsref_find.asp
+  12. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+  13. https://stackoverflow.com/questions/58127282/how-we-can-add-two-event-listeners-click-and-keydown-in-javascript
+  14. https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+  15. https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click
+  16. https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+  17. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
   
 
 
@@ -135,17 +146,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
+  Dit is mijn storyboard met functionaliteiten
   <img src="readme-images/opdracht2design.png" width="375px" alt="uitkomst opdracht 2">
+  Ik heb tijdens het developen van deze opdracht een paar aanpassingen gedaan omdat deze mij wat meer uitdagend leken en ook omdat ik hier meer uit kon halen voor het eind product. Denk bijvoorbeeld aan de drag en drop.
 
-
+  Dit is de uitkomst na behoorlijk wat werk.
+  <img src="readme-images/uitkomst.png" width="375px" alt="uitkomst opdracht 2">
+  
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  ik heb geleerd hoe je een array uitleest in een tabel en ook hoe je vervolgends een hele row weg kan halen uit de array ipv de array hellemaal te verwijderen. 
+  Ook ben ik blij dat de drag en drop hierbij werkt.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/table.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  Dit is de courasel op mijn pagina, het was in het begin moeilijk om de kaartjes als een stapel te laten zien, en ik wou dit ook optimaal maken voor het geval dat ik later meer kaartjes zou willen gebruiken. Dus dit werkt gelukkig nu wel en ook nog is met javascript de positionering gefixxed.
+  <img src="readme-images/courasel.png" width="375px" alt="bummer">
 </details>

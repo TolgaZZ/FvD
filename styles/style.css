@@ -1,0 +1,210 @@
+/* Fonts */
+@font-face {
+  font-family: 'eenfont';
+  src: url('../fonts/eenfont.woff2') format('woff2'),
+    url('../fonts/eenfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* CSS Remedy */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+button:not[disabled],
+summary {
+  cursor: pointer;
+}
+
+/* Custom properties */
+:root {
+  --color-text: #111;
+  --color-background: #f0f0f0;
+  --button-color: #191414;
+}
+
+/* Jouw styling */
+body {
+  font-family: eenfont, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column; /* add this */
+}
+
+@media (prefers-color-scheme: dark) {
+
+	/* Styles for dark mode */
+	:root {
+		/* startje */
+		--color-text: #fff;
+		--color-background: #191414;
+    --color-button : #1DB954;
+	}
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+}
+
+.card {
+  position: absolute;
+  width: 50em;
+  height: 50em;
+  background-color: powderblue;
+  box-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .25em;
+  transition: all 0.5s;
+  background-size: cover; /* add this */
+  background-position: center; /* add this */
+  background-repeat: no-repeat; /* add this */
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-1em);
+  box-shadow: 0 0.8em 1.2em rgba(0, 0, 0, 0.1);
+}
+
+.card.selected {
+  z-index: 5;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 2vw;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30em;
+  perspective: 1000px;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+/* Swipe functionality */
+.carousel-container > .carousel {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Song info */
+.song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.song-title {
+  font-size: 3vw;
+  margin-bottom: 1em;
+}
+
+.play-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.play-button {
+  font-size: 2em;
+  padding: 0.5em 1.5em;
+  margin-right: 1em;
+  background-color: var(--color-button);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.current-time {
+  font-size: 2vw;
+}
+
+.play-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.grid-container {
+  width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.grid-item-image {
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+}
+
+.grid-item-title {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.grid-item-add,
+.grid-item-remove {
+  margin-left: 1em;
+  background-color: #114623;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}

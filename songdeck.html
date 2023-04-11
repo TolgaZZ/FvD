@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="jouw naam">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Opdracht 2: Interactie galore - Frontend voor Designers</title>
+
+	<link href="styles/style.css" rel="stylesheet">
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="manifest" href="/manifest.webmanifest">
+</head>
+
+<body>
+
+	<header>
+		<h1>Songdeck</h1>
+		<button onclick="login()">Login</button>
+	</header>
+
+	<main>
+		<div class="carousel-container">
+			<div class="carousel">
+				<div class="card selected" id="card1">
+					<div class="card-image"></div>
+				</div>
+				<div class="card" id="card2">
+					<div class="card-image"></div>
+				</div>
+				<div class="card" id="card3">
+					<div class="card-image"></div>
+				</div>
+				<div class="card" id="card4">
+					<div class="card-image"></div>
+				</div>
+				<div class="card" id="card5">
+					<div class="card-image"></div>
+				</div>
+			</div>
+			<div class="left-arrow arrow"></div>
+			<div class="right-arrow arrow"></div>
+		</div>
+		<div class="song-info-container">
+			<div class="song-info">
+				<div class="song-title"></div>
+				<div class="play-controls">
+					<button class="play-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+							<path fill="#fff" d="M5 4l11 6-11 6z" />
+						</svg>
+					</button>
+					
+					<div class="current-time">0:00</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid-container">
+			<div class="grid-item">
+			  <img class="grid-item-image" src="https://example.com/image1.jpg">
+			  <h2 class="grid-item-title">Title 1</h2>
+			  <button class="grid-item-add">Add</button>
+			  <button class="grid-item-remove">Remove</button>
+			</div>
+			<div class="grid-item">
+			  <img class="grid-item-image" src="https://example.com/image2.jpg">
+			  <h2 class="grid-item-title">Title 2</h2>
+			  <button class="grid-item-add">Add</button>
+			  <button class="grid-item-remove">Remove</button>
+			</div>
+			<div class="grid-item">
+			  <img class="grid-item-image" src="https://example.com/image3.jpg">
+			  <h2 class="grid-item-title">Title 3</h2>
+			  <button class="grid-item-add">Add</button>
+			  <button class="grid-item-remove">Remove</button>
+			</div>
+			<div class="grid-item">
+			  <img class="grid-item-image" src="https://example.com/image4.jpg">
+			  <h2 class="grid-item-title">Title 4</h2>
+			  <button class="grid-item-add">Add</button>
+			  <button class="grid-item-remove">Remove</button>
+			</div>
+		  </div>
+		  
+	</main>
+
+	<footer>
+		<script defer src="scripts/script.js"></script>
+		<script defer src="scripts/script2.js"></script>
+		<!-- <script defer src="scripts/script3.js"></script> -->
+	</footer>
+
+</body>
+
+</html>
